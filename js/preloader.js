@@ -1,14 +1,8 @@
-/**********************   PRELOADER  ****************************/ 
+const loader = document.querySelector('#loader-wrapper');
 
+window.addEventListener('load', () => {
+    if (!loader) return;
 
-$(window).on("load", function(){
-    $("#loader-wrapper").fadeOut("slow");
+    loader.classList.add('is-hidden');
+    loader.addEventListener('transitionend', () => loader.remove(), { once: true });
 });
-
-//Without using jquery here is my custom javascript, if you don't like plugins, this javascript is at work
-
-//var preloader = document.getElementById('loader-wrapper');
-
-//function load() {
-///   preloader.style.display = 'none';
-//}
