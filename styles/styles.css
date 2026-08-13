@@ -1023,7 +1023,9 @@ header .current a {
 /* BACK TO TOP BUTTON */
 
 #back-to-top-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -1036,12 +1038,19 @@ header .current a {
   outline: none;
   border: 3px solid #333;
   border-radius: 50%;
+  padding: 0;
+  line-height: 1;
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
   transform: translate3d(0, 12px, 0);
   transition: background-color .2s ease, color .2s ease, opacity .2s ease, transform .2s ease, visibility .2s;
   will-change: opacity, transform;
+}
+
+#back-to-top-btn i {
+  display: block;
+  line-height: 1;
 }
 
 #back-to-top-btn.is-visible {
