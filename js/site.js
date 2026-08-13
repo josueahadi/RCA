@@ -1,11 +1,18 @@
 const loader = document.querySelector('#loader-wrapper');
 
-window.addEventListener('load', () => {
+const hideLoader = () => {
     if (!loader) return;
 
     loader.classList.add('is-hidden');
     loader.addEventListener('transitionend', () => loader.remove(), { once: true });
-});
+    window.setTimeout(() => loader.remove(), 250);
+};
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', hideLoader, { once: true });
+} else {
+    hideLoader();
+}
 
 const backToTopButton = document.querySelector('#back-to-top-btn');
 
