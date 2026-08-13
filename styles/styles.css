@@ -1023,7 +1023,7 @@ header .current a {
 /* BACK TO TOP BUTTON */
 
 #back-to-top-btn {
-  display: none;
+  display: block;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -1036,9 +1036,19 @@ header .current a {
   outline: none;
   border: 3px solid #333;
   border-radius: 50%;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-property: background-color, color;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(0, 12px, 0);
+  transition: background-color .2s ease, color .2s ease, opacity .2s ease, transform .2s ease, visibility .2s;
+  will-change: opacity, transform;
+}
+
+#back-to-top-btn.is-visible {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 0);
 }
 
 #back-to-top-btn:hover, #back-to-top-btn:focus {
@@ -1050,63 +1060,6 @@ header .current a {
   .container { padding: 20px 100px; }
   #back-to-top-btn { font-size: 22px; width: 40px; height: 40px; bottom: 15px; right: 15px; }
 }
-
-/* Animations */
-.btnEntrance {
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
-  animation-name: btnEntrance;
-}
-/* zoomIn */
-/* @keyframes btnEntrance { 
-  from {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-  to {
-    opacity: 1;
-  }    
-} */
-
-/* fadeInUp */
-@keyframes btnEntrance {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.btnExit {
-  animation-duration: 0.25s;
-  animation-fill-mode: both;  
-  animation-name: btnExit;
-}
-/* zoomOut */
-/* @keyframes btnExit {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-} */
-
-/* fadeOutDown */
-@keyframes btnExit {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-}
-
 
 /* FOOTER */
 

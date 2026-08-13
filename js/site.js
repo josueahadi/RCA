@@ -10,7 +10,6 @@ window.addEventListener('load', () => {
 const backToTopButton = document.querySelector('#back-to-top-btn');
 
 if (backToTopButton) {
-    let hideTimer;
     let isBackToTopVisible = false;
     let scrollFramePending = false;
 
@@ -20,22 +19,7 @@ if (backToTopButton) {
 
         if (shouldBeVisible === isBackToTopVisible) return;
         isBackToTopVisible = shouldBeVisible;
-        window.clearTimeout(hideTimer);
-
-        if (shouldBeVisible) {
-            backToTopButton.classList.remove('btnExit');
-            backToTopButton.classList.add('btnEntrance');
-            backToTopButton.style.display = 'block';
-            return;
-        }
-
-        if (backToTopButton.classList.contains('btnEntrance')) {
-            backToTopButton.classList.remove('btnEntrance');
-            backToTopButton.classList.add('btnExit');
-            hideTimer = window.setTimeout(() => {
-                backToTopButton.style.display = 'none';
-            }, 250);
-        }
+        backToTopButton.classList.toggle('is-visible', shouldBeVisible);
     };
 
     const requestBackToTopUpdate = () => {
