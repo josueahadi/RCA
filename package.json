@@ -1,0 +1,25 @@
+{
+  "name": "rca",
+  "version": "1.0.0",
+  "description": "School Website",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "test": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josueahadi/RCA.git"
+  },
+  "keywords": [],
+  "author": "Ahadi Habib Josue",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/josueahadi/RCA/issues"
+  },
+  "homepage": "https://github.com/josueahadi/RCA#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

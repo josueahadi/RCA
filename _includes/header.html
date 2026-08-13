@@ -1,0 +1,19 @@
+<header>
+    <div class="container">
+        <div id="branding">
+            <a class="branding-link" href="index.html" aria-label="{{ site.name }} homepage">
+                <h1><span class="header-img"></span>Rwanda<br><span class="coding">&lt;/&gt;Coding</span><br>Academy</h1>
+            </a>
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="primary-navigation" aria-label="Primary navigation">
+            <ul>
+                {% for item in site.navigation %}
+                <li{% if currentPage == item.key %} class="current"{% endif %}><a href="{{ item.url }}">{{ item.label }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -139,7 +139,7 @@ header .current a {
     min-height: 650px;
     background-color: #00000036;
     background: url('../images/showcase.jpg') no-repeat 0 -450px;
-    background-attachment: fixed;
+    background-attachment: scroll;
     text-align: center;
     color: #ffffff;
 }
@@ -402,7 +402,7 @@ header .current a {
     background: linear-gradient(rgba(5, 0, 50, .3), rgba(5, 0, 50, .3)), url('../images/about/banner.jpg')0 -200px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     text-align: center;
     color: #ffffff;
     animation: slider 3s infinite linear;
@@ -754,7 +754,7 @@ header .current a {
     background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('../images/admission/banner.jpg') 0 -200px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     text-align: center;
     color: #ffffff;
 }
@@ -1368,14 +1368,14 @@ img {
 }
 
 #showcase {
-    min-height: calc(100svh - 60px);
+    min-height: 75svh;
     padding: clamp(48px, 8vw, 96px) 20px;
     background: linear-gradient(rgba(5, 10, 25, .45), rgba(5, 10, 25, .58)), url('../images/showcase.jpg') center / cover no-repeat;
     background-attachment: scroll;
 }
 
 #showcase .container {
-    min-height: calc(100svh - 156px);
+    min-height: calc(75svh - 192px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1532,13 +1532,13 @@ img {
     }
 
     #showcase {
-        min-height: calc(100svh - 72px);
+        min-height: 78svh;
         padding: 44px 18px;
         background-position: 58% center;
     }
 
     #showcase .container {
-        min-height: calc(100svh - 160px);
+        min-height: calc(78svh - 88px);
     }
 
     #boxes h2 {

@@ -1,0 +1,20 @@
+{
+  "name": "Rwanda Coding Academy",
+  "copyrightYear": 2026,
+  "navigation": [
+    { "key": "home", "label": "Home", "url": "index.html" },
+    { "key": "about", "label": "About Us", "url": "about.html" },
+    { "key": "admission", "label": "Admission", "url": "admission.html" },
+    { "key": "contact", "label": "Contact Us", "url": "contact.html" },
+    { "key": "circular", "label": "Circular", "url": "docs/RCA_Student_Circular.pdf" }
+  ],
+  "socialLinks": [
+    { "label": "Facebook", "url": "https://www.facebook.com/search/top/?q=rwanda%20coding%20academy&epa=SEARCH_BOX", "icon": "fa-facebook-f" },
+    { "label": "X (formerly Twitter)", "url": "https://twitter.com/search?q=rwanda%20coding%20academy&src=typd", "icon": "fa-x-twitter" },
+    { "label": "WhatsApp", "url": "https://web.whatsapp.com/", "icon": "fa-whatsapp" },
+    { "label": "Instagram", "url": "https://www.instagram.com/explore/tags/rwandacodingacademy/", "icon": "fa-instagram" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/search/results/all/?keywords=rwanda%20coding%20academy&origin=GLOBAL_SEARCH_HEADER", "icon": "fa-linkedin-in" },
+    { "label": "YouTube", "url": "https://www.youtube.com", "icon": "fa-youtube" },
+    { "label": "Pinterest", "url": "https://www.pinterest.com/", "icon": "fa-pinterest-p" }
+  ]
+}

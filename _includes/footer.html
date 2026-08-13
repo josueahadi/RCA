@@ -1,0 +1,29 @@
+<div class="footer-wrapper">
+    <div class="subscribe">
+        <form action="#" method="POST" name="Subscriptions" netlify>
+            <input type="email" class="email" name="person" placeholder="Your Email" autocomplete="email" aria-label="Email address" required>
+            <input type="submit" class="submit" value="Subscribe">
+        </form>
+    </div>
+    <div class="footer-text">
+        <p>Follow Us on:</p>
+    </div>
+    <div class="footer-social-icons">
+        <ul>
+            {% for social in site.socialLinks %}
+            <li><a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ social.label }}"><i class="fa-brands {{ social.icon }}" aria-hidden="true"></i></a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="footer-copyright">
+        <div>&copy;{{ site.copyrightYear }} Ahadi H Josue&nbsp;|&nbsp;All Rights Reserved</div>
+    </div>
+</div>
+
+<div id="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>
+
+<button id="back-to-top-btn" aria-label="Back to top"><i class="fa-solid fa-angles-up" aria-hidden="true"></i></button>
+
+<script src="js/site.js"></script>

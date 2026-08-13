@@ -1,3 +1,7 @@
+---
+currentPage: contact
+permalink: contact.html
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,27 +30,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <a class="branding-link" href="index.html" aria-label="Rwanda Coding Academy homepage">
-                    <h1><span class="header-img"></span>Rwanda<br><span class="coding">&lt;/&gt;Coding</span><br>Academy</h1>
-                </a>
-            </div>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
-                <span></span><span></span><span></span>
-            </button>
-            <nav id="primary-navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="admission.html">Admission</a></li>
-                    <li class="current"><a href="contact.html">Contact Us</a></li>
-                    <li><a href="./docs/RCA_Student_Circular.pdf" target="_self">Circular</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    {% include "header.html" %}
 
     <div class="contact-content">
         <div class="contact-wrapper">
@@ -76,49 +60,10 @@
 
     <div class="relative-content">
 
-        <div class="footer-wrapper">
-
-            <div class="subscribe" netlify>
-                <form action="#" method="POST">
-                    <input type="email" class="email" name="person" placeholder="Your Email" autocomplete="off" required>
-                    <input type="submit" class="submit" value="Subscribe">
-                </form>
-            </div>
-            <div  class="footer-text">
-                <p>Follow Us on:</p>
-            </div> 
-
-            <div class="footer-social-icons">
-                <ul>
-                    <li><a href="https://www.facebook.com/search/top/?q=rwanda%20coding%20academy&epa=SEARCH_BOX" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
-                    <li><a href="https://twitter.com/search?q=rwanda%20coding%20academy&src=typd" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.instagram.com/explore/tags/rwandacodingacademy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.linkedin.com/search/results/all/?keywords=rwanda%20coding%20academy&origin=GLOBAL_SEARCH_HEADER" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-      
-            <div class="footer-copyright">
-                <div>
-                    &copy;2019 Ahadi H Josue&nbsp;|&nbsp;All Rights Reserved
-                </div>
-            </div>
-            
-        </div>
+        {% include "footer.html" %}
 
     </div>
 
-    <div id="loader-wrapper">
-        <span class="loader"><span class="loader-inner"></span></span>
-    </div>
-
-    <button id="back-to-top-btn" aria-label="Back to top"><i class="fa-solid fa-angles-up" aria-hidden="true"></i></button>
-
-    <script src="js/preloader.js"></script>
-    <script src="js/back_to_top.js"></script>
-    <script src="js/mobile_nav.js"></script>
 </body>
 
 </html>
