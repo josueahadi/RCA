@@ -1057,7 +1057,6 @@ header .current a {
 }
 
 @media(max-width: 992px) {
-  .container { padding: 20px 100px; }
   #back-to-top-btn { font-size: 22px; width: 40px; height: 40px; bottom: 15px; right: 15px; }
 }
 
@@ -1328,12 +1327,14 @@ img {
 }
 
 #showcase .container {
+    width: 100%;
     min-height: calc(75svh - 192px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: clamp(14px, 3vw, 24px);
+    padding: 0;
 }
 
 #showcase h1 {
@@ -1343,10 +1344,12 @@ img {
 }
 
 #showcase p {
+    width: min(100%, 760px);
     max-width: 760px;
     margin: 0;
     padding: 0;
     font-size: clamp(1rem, 2.4vw, 1.25rem);
+    line-height: 1.55;
 }
 
 #showcase .hero-logo {
@@ -1492,6 +1495,10 @@ img {
 
     #showcase .container {
         min-height: calc(78svh - 88px);
+    }
+
+    #showcase p {
+        max-width: 34rem;
     }
 
     #boxes h2 {
